@@ -6,7 +6,7 @@
           <div class="form-header">
             <h1>{{ msg }}</h1>
           </div>
-          <form >
+          <form method="post">
             <div class="row">
               <div class="col-md-6">
               <div class="form-group">
@@ -112,6 +112,7 @@ export default {
       e.target.nextElementSibling.value = value
     },
     myFun: function (e) {
+      e.preventDefault()
       if (e.keyCode === 40 || e.keyCode === 38 || e.keyCode === 13) {
         return
       }
